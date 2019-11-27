@@ -1,6 +1,7 @@
 export interface communEntite {
   id: number;
   nom: string;
+  description: string;
 }
 
 export default interface ideeEntite extends communEntite {

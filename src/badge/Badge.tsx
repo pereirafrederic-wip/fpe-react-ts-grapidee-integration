@@ -1,18 +1,14 @@
 import * as React from "react";
 import { Badge } from "antd";
 import { badgeEntite } from "../Interfaces";
-import { Fragment } from "react";
-
+import "antd/dist/antd.css";
 export default (badge: badgeEntite) => {
   const hrefDomaine: string = "/domaine/" + badge.idDomaine;
   return (
-    <Fragment>
-      {hrefDomaine}
-      {badge.nombre}
-      {"hello"}
-      <Badge count={badge.nombre}>
-        <a href={hrefDomaine} className="head-example" />
-      </Badge>
-    </Fragment>
+    <Badge count={`${badge.nombre} x ${badge.nom}`}>
+      <a href={hrefDomaine} className="head-example">
+        lien
+      </a>
+    </Badge>
   );
 };

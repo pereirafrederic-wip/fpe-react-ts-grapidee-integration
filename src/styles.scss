@@ -2,7 +2,6 @@
   font-family: sans-serif;
   text-align: center;
 }
-@import 'antd/dist/antd.css';
 
 /*neutral*/
 $neutral-primary-color-dark:   #616161;
@@ -14,3 +13,10 @@ $neutral-primary-text-color:   #212121;
 $neutral-secondary-text-color: #757575;
 $neutral-divider-color:        #BDBDBD;
 
+.rows{
+  display: flex;
+  flex-direction: row;
+  .row {
+    margin-left: 10px;
+  }
+}
