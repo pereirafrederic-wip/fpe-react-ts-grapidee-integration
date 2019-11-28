@@ -3,6 +3,7 @@ import { Card, Icon, Divider } from "antd";
 import { DomaineEntite } from "../Interfaces";
 
 import Grappe from "../Grappe/Grappe";
+import Badge from "../Badge/Badge";
 
 import "antd/dist/antd.css";
 
@@ -25,6 +26,14 @@ export default (domaine: DomaineEntite) => {
         {domaine.listeGrappe.map(grappe => (
           <div className="row" key={`${domaine.id}-${grappe.id}`}>
             {Grappe(grappe)}
+          </div>
+        ))}
+      </div>
+      <Divider />
+      <div className="rows">
+        {domaine.listeBadge.map(badge => (
+          <div className="row" key={`${domaine.id}-${badge.id}`}>
+            {Badge(badge)}
           </div>
         ))}
       </div>

@@ -6,40 +6,27 @@ import Tag from "./Tag/Tag";
 
 import "./styles.scss";
 import "antd/dist/antd.css";
-import {
+import ideeEntite, {
   badgeEntite,
   DomaineEntite,
   tagEntite,
   GrappeEntite
 } from "./Interfaces";
 
-const badgeExemple: badgeEntite = {
+const badge1Exemple: badgeEntite = {
   nombre: 10,
   nom: "badge 1",
   id: 1,
   idDomaine: 12345,
   description: ""
 };
-const grappe1Exemple: GrappeEntite = {
+
+const badge2Exemple: badgeEntite = {
+  nombre: 10,
+  nom: "badge 1",
   id: 1,
-  nom: "grappe 12",
-  description: "grappe 12 ",
-  listeBadge: [],
-  listeIdee: []
-};
-const grappe2Exemple: GrappeEntite = {
-  id: 2,
-  nom: "grappe 22",
-  description: "grappe 22 ",
-  listeBadge: [],
-  listeIdee: []
-};
-const domaineExemple: DomaineEntite = {
-  id: 2,
-  nom: "Domaine 1234",
-  description: "domaine domaine",
-  listeBadge: [],
-  listeGrappe: [grappe1Exemple, grappe2Exemple]
+  idDomaine: 12345,
+  description: ""
 };
 
 const tagExemple: tagEntite = {
@@ -47,17 +34,73 @@ const tagExemple: tagEntite = {
   id: 1,
   description: "",
   listeIdee: [],
-  listeBadge: []
+  listeBadge: [badge1Exemple, badge2Exemple]
+};
+
+const grappe1Exemple: GrappeEntite = {
+  id: 1,
+  nom: "grappe 12",
+  description: "grappe 12 ",
+  listeBadge: [badge2Exemple],
+  listeIdee: []
+};
+const idee3Exemple: ideeEntite = {
+  id: 13,
+  projet: true,
+  contenu: "a3d33adad dad ad ada dad ad d",
+  description: `m333flflflf l flflflf k `,
+  tag: [tagExemple],
+  listeDomaine: [],
+  listeGrappe: [],
+  listeEsclave: [],
+  listeBadge: [badge1Exemple]
+};
+
+const grappe2Exemple: GrappeEntite = {
+  id: 2,
+  nom: "grappe 22",
+  description: "grappe 22 ",
+  listeBadge: [badge1Exemple],
+  listeIdee: [idee3Exemple]
+};
+const domaineExemple: DomaineEntite = {
+  id: 2,
+  nom: "Domaine 1234",
+  description: "domaine domaine",
+
+  listeBadge: [badge2Exemple],
+  listeGrappe: [grappe1Exemple, grappe2Exemple]
+};
+
+const idee1Exemple: ideeEntite = {
+  id: 1,
+  projet: true,
+  contenu: "adadad dad ad ada dad ad d",
+  description: `mflflflf l flflflf k `,
+  tag: [tagExemple],
+  listeDomaine: [domaineExemple],
+  listeGrappe: [grappe1Exemple, grappe2Exemple],
+  listeEsclave: [],
+  listeBadge: [badge1Exemple]
+};
+
+const idee2Exemple: ideeEntite = {
+  id: 12,
+  projet: true,
+  contenu: "io dad oioioioad ada dad ad d",
+  description: `ioioioio  l flflflf k `,
+  tag: [],
+  listeDomaine: [domaineExemple],
+  listeGrappe: [grappe2Exemple],
+  listeEsclave: [idee1Exemple],
+  listeBadge: [badge1Exemple]
 };
 
 function App() {
   return (
     <div className="App">
       <h1>Hello CodeSandbox</h1>
-      {Badge(badgeExemple)}
       <div className="rows">{Domaine(domaineExemple)}</div>
-
-      {Tag(tagExemple)}
     </div>
   );
 }

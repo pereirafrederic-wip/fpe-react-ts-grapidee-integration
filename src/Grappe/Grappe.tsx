@@ -1,6 +1,7 @@
 import * as React from "react";
 import { Card, Icon, Divider } from "antd";
 import { GrappeEntite } from "../Interfaces";
+import Badge from "../Badge/Badge";
 import "antd/dist/antd.css";
 
 export default (grappe: GrappeEntite) => {
@@ -18,6 +19,13 @@ export default (grappe: GrappeEntite) => {
     <Card title={grappe.nom} bordered={true} actions={actions}>
       {grappe.description}
       <Divider />
+      <div className="rows">
+        {grappe.listeBadge.map(badge => (
+          <div className="row" key={`${grappe.id}-${badge.id}`}>
+            {Badge(badge)}
+          </div>
+        ))}
+      </div>
     </Card>
   );
 };
