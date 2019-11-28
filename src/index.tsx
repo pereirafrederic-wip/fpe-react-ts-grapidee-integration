@@ -1,8 +1,6 @@
 import * as React from "react";
 import { render } from "react-dom";
-import Badge from "./badge/Badge";
 import Domaine from "./Domaine/Domaine";
-import Tag from "./Tag/Tag";
 
 import "./styles.scss";
 import "antd/dist/antd.css";
@@ -77,7 +75,7 @@ const idee1Exemple: ideeEntite = {
   projet: true,
   contenu: "adadad dad ad ada dad ad d",
   description: `mflflflf l flflflf k `,
-  tag: [tagExemple],
+  tag: tagExemple,
   listeDomaine: [domaineExemple],
   listeGrappe: [grappe1Exemple, grappe2Exemple],
   listeEsclave: [],
