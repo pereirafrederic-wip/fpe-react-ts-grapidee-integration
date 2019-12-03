@@ -1,6 +1,7 @@
 import * as React from "react";
 import { render } from "react-dom";
 import Domaine from "./Domaine/Domaine";
+import Idee from "./Idee/Idee";
 
 import "./styles.scss";
 import "antd/dist/antd.css";
@@ -42,16 +43,16 @@ const grappe1Exemple: GrappeEntite = {
   listeBadge: [badge2Exemple],
   listeIdee: []
 };
+
 const idee3Exemple: ideeEntite = {
   id: 13,
   projet: true,
-  contenu: "a3d33adad dad ad ada dad ad d",
-  description: `m333flflflf l flflflf k `,
-  tag: [tagExemple],
+  contenu: "idee exemple 3",
+  description: `ioioioio  l flflflf k `,
   listeDomaine: [],
   listeGrappe: [],
   listeEsclave: [],
-  listeBadge: [badge1Exemple]
+  listeBadge: []
 };
 
 const grappe2Exemple: GrappeEntite = {
@@ -99,6 +100,10 @@ function App() {
     <div className="App">
       <h1>Hello CodeSandbox</h1>
       <div className="rows">{Domaine(domaineExemple)}</div>
+      <div className="rows">
+        {Idee(idee1Exemple)}
+        {Idee(idee2Exemple)}
+      </div>
     </div>
   );
 }

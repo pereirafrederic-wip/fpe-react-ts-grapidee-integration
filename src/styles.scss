@@ -20,3 +20,11 @@ $neutral-divider-color:        #BDBDBD;
     margin-left: 10px;
   }
 }
+
+.domaine, .grappe, .idee{
+  background-color: $neutral-primary-color-dark;
+}
+
+.description {
+  background-color: $neutral-primary-color;
+}

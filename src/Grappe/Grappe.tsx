@@ -1,4 +1,4 @@
-import * as React from "react";
+import React, { Fragment } from "react";
 import { Card, Icon, Divider } from "antd";
 import { GrappeEntite } from "../Interfaces";
 import Badge from "../Badge/Badge";
@@ -16,16 +16,19 @@ export default (grappe: GrappeEntite) => {
   }
   actions.push(<Icon type="delete" key="delete" />);
   return (
-    <Card title={grappe.nom} bordered={true} actions={actions}>
-      {grappe.description}
-      <Divider />
-      <div className="rows">
-        {grappe.listeBadge.map(badge => (
-          <div className="row" key={`${grappe.id}-${badge.id}`}>
-            {Badge(badge)}
-          </div>
-        ))}
-      </div>
-    </Card>
+    <div className="grappe">
+      <Card title={grappe.nom} bordered={true} actions={actions}>
+        <div className="description">{grappe.description}</div>
+
+        <Divider />
+        <div className="rows">
+          {grappe.listeBadge.map(badge => (
+            <div className="row" key={`${grappe.id}-${badge.id}`}>
+              {Badge(badge)}
+            </div>
+          ))}
+        </div>
+      </Card>
+    </div>
   );
 };
