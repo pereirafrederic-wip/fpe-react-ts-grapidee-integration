@@ -23,7 +23,7 @@ export default (idee: ideeEntite) => {
     <div className="idee">
       <Card title={idee.nom} bordered={true} actions={actions}>
         <div className="description">{idee.description}</div>
-        <Divider />
+        <Divider dashed={true} />
         <div className="contenu">{idee.contenu}</div>
         <Divider />
         <div className="rows">

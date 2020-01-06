@@ -22,9 +22,21 @@ $neutral-divider-color:        #BDBDBD;
 }
 
 .domaine, .grappe, .idee{
-  background-color: $neutral-primary-color-dark;
+  margin: 2em;
+}
+
+.domaine{
+  .ant-card{
+    border-radius: 10px;
+  }
+}
+
+.grappe{
+  .ant-card{
+    border-radius: 20px;
+  }
 }
 
 .description {
-  background-color: $neutral-primary-color;
+  margin: 0.5em;
 }

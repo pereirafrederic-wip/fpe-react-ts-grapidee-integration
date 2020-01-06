@@ -4,34 +4,34 @@ export interface communEntite {
   description: string;
 }
 
-export default interface ideeEntite extends communEntite {
+export default interface IdeeEntite extends communEntite {
   level: number;
   projet: boolean;
   contenu: string;
 
-  tag: tagEntite;
+  tag: BadgeEntite;
 
   listeDomaine: Array<DomaineEntite>;
   listeGrappe: Array<GrappeEntite>;
-  listeEsclave: Array<ideeEntite>;
-  listeBadge: Array<badgeEntite>;
+  listeEsclave: Array<IdeeEntite>;
+  listeBadge: Array<BadgeEntite>;
 }
 
-export interface tagEntite extends communEntite {
-  listeIdee: Array<ideeEntite>;
-  listeBadge: Array<badgeEntite>;
+export interface TagEntite extends communEntite {
+  listeIdee: Array<IdeeEntite>;
+  listeBadge: Array<BadgeEntite>;
 }
 
 export interface DomaineEntite extends communEntite {
   listeGrappe: Array<GrappeEntite>;
-  listeBadge: Array<badgeEntite>;
+  listeBadge: Array<BadgeEntite>;
 }
 export interface GrappeEntite extends communEntite {
-  listeIdee: Array<ideeEntite>;
-  listeBadge: Array<badgeEntite>;
+  listeIdee: Array<IdeeEntite>;
+  listeBadge: Array<BadgeEntite>;
 }
 
-export interface badgeEntite extends communEntite {
+export interface BadgeEntite extends communEntite {
   nombre: number;
   idDomaine: number;
 }

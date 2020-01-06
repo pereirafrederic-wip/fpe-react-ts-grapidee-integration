@@ -5,14 +5,14 @@ import Idee from "./Idee/Idee";
 
 import "./styles.scss";
 import "antd/dist/antd.css";
-import ideeEntite, {
-  badgeEntite,
+import IdeeEntite, {
+  BadgeEntite,
   DomaineEntite,
-  tagEntite,
+  TagEntite,
   GrappeEntite
 } from "./Interfaces";
 
-const badge1Exemple: badgeEntite = {
+const badge1Exemple: BadgeEntite = {
   nombre: 10,
   nom: "badge 1",
   id: 1,
@@ -20,7 +20,7 @@ const badge1Exemple: badgeEntite = {
   description: ""
 };
 
-const badge2Exemple: badgeEntite = {
+const badge2Exemple: BadgeEntite = {
   nombre: 10,
   nom: "badge 1",
   id: 1,
@@ -28,7 +28,7 @@ const badge2Exemple: badgeEntite = {
   description: ""
 };
 
-const tagExemple: tagEntite = {
+const tagExemple: TagEntite = {
   nom: "tagA",
   id: 1,
   description: "",
@@ -44,15 +44,15 @@ const grappe1Exemple: GrappeEntite = {
   listeIdee: []
 };
 
-const idee3Exemple: ideeEntite = {
+const idee3Exemple: IdeeEntite = {
   id: 13,
   projet: true,
   contenu: "idee exemple 3",
   description: `ioioioio  l flflflf k `,
-  listeDomaine: [],
-  listeGrappe: [],
-  listeEsclave: [],
-  listeBadge: []
+  listeDomaine: new Array(),
+  listeGrappe: new Array(),
+  listeEsclave: new Array(),
+  listeBadge: new Array()
 };
 
 const grappe2Exemple: GrappeEntite = {
@@ -62,16 +62,25 @@ const grappe2Exemple: GrappeEntite = {
   listeBadge: [badge1Exemple],
   listeIdee: [idee3Exemple]
 };
+
+const grappe3Exemple: GrappeEntite = {
+  id: 2,
+  nom: "grappe 232",
+  description: "grappe 232 ",
+  listeBadge: [badge1Exemple],
+  listeIdee: [idee3Exemple]
+};
+
 const domaineExemple: DomaineEntite = {
   id: 2,
   nom: "Domaine 1234",
   description: "domaine domaine",
 
   listeBadge: [badge2Exemple],
-  listeGrappe: [grappe1Exemple, grappe2Exemple]
+  listeGrappe: [grappe1Exemple, grappe2Exemple, grappe3Exemple]
 };
 
-const idee1Exemple: ideeEntite = {
+const idee1Exemple: IdeeEntite = {
   id: 1,
   projet: true,
   contenu: "adadad dad ad ada dad ad d",
@@ -83,7 +92,7 @@ const idee1Exemple: ideeEntite = {
   listeBadge: [badge1Exemple]
 };
 
-const idee2Exemple: ideeEntite = {
+const idee2Exemple: IdeeEntite = {
   id: 12,
   projet: true,
   contenu: "io dad oioioioad ada dad ad d",
