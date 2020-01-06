@@ -20,7 +20,7 @@ export default (domaine: DomaineEntite) => {
   actions.push(<Icon type="delete" key="delete" />);
   return (
     <Card title={domaine.nom} bordered={true} actions={actions}>
-      {domaine.description}
+      <React.Fragment></React.Fragment>domaine.description}
       <Divider />
       <div className="rows">
         {domaine.listeGrappe.map(grappe => (
