@@ -12,9 +12,6 @@ import ideeEntite, {
   GrappeEntite
 } from "./Interfaces";
 
-import LogoGrapidee from "../public/img/fpe-grapidee-logo-principal.png";
-import Title from "../public/img//fpe-grapidee-title.png";
-
 const badge1Exemple: badgeEntite = {
   nombre: 10,
   nom: "badge 1",
@@ -99,6 +96,9 @@ const idee2Exemple: ideeEntite = {
 };
 
 function App() {
+  const LogoGrapidee;
+  const Title;
+
   return (
     <div className="App">
       <img src={LogoGrapidee} />
